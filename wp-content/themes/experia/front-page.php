@@ -30,7 +30,7 @@ get_header();
                       </div>
                       <div class="boxdescription">
                         <ul class="dealer-list">
-                        <?php foreach(get_dealers() as $index => $dealer) { ?>
+                        <?php foreach(get_dealers(2) as $index => $dealer) { ?>
                              <li><?php echo get_the_post_thumbnail($dealer->ID,array(200,200)); ?></li>
                         <?php
                              //echo ((($index+1) % 3) == 0) ? '</div><div class="row">' : '';
@@ -66,7 +66,8 @@ get_header();
                       <?php esc_attr_e('FAQs','experia'); ?>
                     </div>
                     <div class="boxdescription">
-                    
+                      <i class="fa fa-question-circle fa-5x"></i> <br />
+                      <a href="<?php echo get_site_url(); ?>/faqs">Read More <br />Frequently Asked Questions</a>
                     </div>
                     
                   </div>

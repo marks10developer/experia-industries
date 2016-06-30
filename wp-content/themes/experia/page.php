@@ -21,13 +21,13 @@
 		  </div><!-- entry-content -->
 				
 		</section><!-- section-->  
-		  <?php
-		  /*<div id="sidebar">
-		  if ( function_exists('dynamic_sidebar') && is_active_sidebar("experia_ads") ) {
-		  //dynamic_sidebar('experia_ads');
-		  }
-		  </div>*/
-		  ?>
+		  
+		  <div id="sidebar">
+		  <?php if ( function_exists('dynamic_sidebar') && is_active_sidebar("experia_ads") ) {
+			dynamic_sidebar('experia_ads');
+		  } ?>
+		  </div>
+		  
 	 
     <div class="clear"></div>
     </div><!-- .page_content --> 

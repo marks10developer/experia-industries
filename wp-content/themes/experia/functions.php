@@ -181,9 +181,9 @@ function create_post_type() {
 }
 add_action( 'init', 'create_post_type' );
 
-function get_dealers(){
+function get_dealers($limit = 30){
 	$args = array(
-		'posts_per_page'   => 30,
+		'posts_per_page'   => $limit,
 		'offset'           => 0,
 		'category'         => '',
 		'category_name'    => '',

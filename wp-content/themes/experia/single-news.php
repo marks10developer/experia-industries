@@ -25,13 +25,15 @@ get_header(); ?>
 						comments_template();
 			   ?>        
 		  </section>       
+		  
+		  <div id="sidebar">
 		  <?php
-		  /*<div id="sidebar">
-		  if ( function_exists('dynamic_sidebar') && is_active_sidebar("experia_ads") ) {
-		  //dynamic_sidebar('experia_ads');
-		  }
-		  </div>*/
+			   if ( function_exists('dynamic_sidebar') && is_active_sidebar("experia_ads") ) {
+					dynamic_sidebar('experia_ads');
+			   }
 		  ?>
+		  </div>
+		  
 		
 		  <div class="clear"></div>
     </div><!-- page_content -->

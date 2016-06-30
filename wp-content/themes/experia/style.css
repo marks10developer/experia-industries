@@ -133,8 +133,9 @@ aside.widget{margin-bottom:30px;}
 aside.widget ul{ list-style:disc; }
 
 h3.widget-title{color:#4f5051; margin-bottom:-5px; padding-bottom:15px; font-size:24px;}
-
+/*
 #sidebar ul li{ list-style:none; background:url(images/sidebar-arrow.png) no-repeat 0 14px; border-bottom:1px dashed #d0cfcf; display:block; word-wrap:break-word; padding:10px 0 10px 20px; }
+*/
 #sidebar ul li a{ font:300 14px/18px "Roboto",sans-serif; color:#3b3b3b; text-transform:uppercase;}
 
 #sidebar ul li a:hover{ color:#2d3f97;}

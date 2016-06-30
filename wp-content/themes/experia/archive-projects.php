@@ -31,7 +31,7 @@
 		  <div id="sidebar">
 		   <?php
 			 if ( function_exists('dynamic_sidebar') && is_active_sidebar("experia_ads") ) {
-					 dynamic_sidebar('experia_ads');
+					dynamic_sidebar('experia_ads');
 			 }
 		   ?>
 		  </div>    

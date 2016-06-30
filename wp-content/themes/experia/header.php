@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
  
-<title><?php echo (get_the_title() != "Home") ? get_the_title() .' - ' : ''; ?><?php bloginfo( 'sitename' ); ?></title>
+<title><?php bloginfo( 'sitename' ); ?> | <?php wp_title('', true,''); ?></title>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">

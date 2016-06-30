@@ -19,7 +19,11 @@
 					</div>
                     <?php experia_pagination(); ?>
                 <?php else : ?>
-                    <?php get_template_part( 'no-results', 'search' ); ?>
+                    <header>
+                        <h1 class="entry-title">No Results</h1>
+                    </header>
+					Sorry, but nothing matched your search terms. Please try again with some different keywords.
+                    <?php //get_template_part( 'no-results', 'search' ); ?>
                 <?php endif; ?>
             </div><!-- blog-post -->
         </section>      
