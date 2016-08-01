@@ -44,7 +44,7 @@
 		</div>
         <div class="copyright-wrapper">
         	<div class="container">
-                <div class="copyright-txt">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All Rights Reserved</div>
+                <div class="copyright-txt">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> All Rights Reserved</div>
             </div>
             <div class="clear"></div>
         </div> 
