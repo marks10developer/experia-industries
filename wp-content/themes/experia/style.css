@@ -419,3 +419,54 @@ ul.dealer-list li{
 .footerdesc a.social{
   color: #dfdfdf;
 }
+.circular-menu-container{
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+    height: 500px; 
+    position: absolute;
+    left: 45%;
+    top: 250px;
+    height: 100px;
+    
+}
+.space-menu{
+  width: 100%;
+  height: 600px;
+  background: url('images/circuit.jpg');
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.circular-menu-container .main-menu li{
+  background: #2d3f97;
+  min-width: 130px !important;
+  height: 90px !important;
+  border-radius: 40px !important;
+  -moz-border-radius: 40px !important;
+  line-height: 55px !important;
+  border:  2px solid #fff;
+  cursor: pointer;
+}
+.circular-menu-container .main-menu li:hover{
+  background: #fff;
+  border: 2px solid #2d3f97; 
+}
+.circular-menu-container .main-menu li:hover a,
+.circular-menu-container .main-menu li:hover h3{
+  color: #2d3f97; 
+}
+.circular-menu-container .main-menu li:first-child{
+  line-height: 105px !important;
+}
+.circular-menu-container .main-menu li:first-child i{
+  font-size: 55px;
+}
+.circular-menu-container .main-menu li a{
+  color: #fff;
+  font-size: 25px
+}
+.circular-menu-container .main-menu li h3{
+  color: #fff;
+  font-size: 13px;
+}

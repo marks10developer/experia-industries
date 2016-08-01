@@ -1,9 +1,10 @@
 <?php get_header(); ?>
 
 	<div class="container">
-	  <?php if(get_the_post_thumbnail_url()){ ?>
+	  <?php /*if(get_the_post_thumbnail_url()){ ?>
 	  <div class="parallax-page-window" data-parallax="scroll" data-image-src="<?php echo get_the_post_thumbnail_url(); ?>"></div>
-	  <?php } ?>
+	  <?php }*/ ?>
+	  <?php include('circular-menu.php'); ?>
       <div class="page_content page_content_inner">
 		
 		<div class="breadcrumbs" typeof="BreadcrumbList">

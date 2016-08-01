@@ -9,10 +9,12 @@ function experia_scripts() {
 	wp_enqueue_style( 'experia-base-style', get_template_directory_uri().'/css/style_base.css' );
 	wp_enqueue_style( 'experia-font-awesome-style', get_template_directory_uri().'/css/font-awesome.css' );
 	wp_enqueue_style( 'experia-animation-style', get_template_directory_uri().'/css/animation.css' );
-	
+	//wp_enqueue_style( 'experia-tooltip-style', get_template_directory_uri().'/css/tooltipster.bundle.min.css' );
 	//wp_enqueue_script( 'experia-bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' );
 	
-	wp_enqueue_script( 'experia-parallax_js', get_template_directory_uri() . '/js/parallax.min.js' );
+	//wp_enqueue_script( 'experia-parallax_js', get_template_directory_uri() . '/js/parallax.min.js' );
+	//wp_enqueue_script( 'experia-tooltip_js', get_template_directory_uri() . '/js/tooltipster.bundle.min.js' );
+	wp_enqueue_script( 'experia-circle_menu_js', get_template_directory_uri() . '/js/jQuery.circleMenu.js' );
 	wp_enqueue_script( 'experia-custom_js', get_template_directory_uri() . '/js/custom.js' );
 
 
@@ -126,6 +128,11 @@ function experia_widgets_init() {
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>',
+    ) );
+	
+    register_sidebar( array(
+        'name' => 'Experia Circular Menu',
+        'id' => 'experia_circular_menu',
     ) );
 }
 add_action( 'widgets_init', 'experia_widgets_init' );

@@ -1,7 +1,7 @@
 
 // NAVIGATION CALLBACK
 var ww = jQuery(window).width();
-jQuery(document).ready(function() {  console.log('asd');
+jQuery(document).ready(function() {  
 	jQuery(".nav li a").each(function() {
 		if (jQuery(this).next().length > 0) {
 			jQuery(this).addClass("parent");
@@ -18,7 +18,33 @@ jQuery(document).ready(function() {  console.log('asd');
         jQuery('.header-inner').removeClass('animated');
         jQuery('.header-inner').removeClass('fadeInUp');  
     },1500);
-
+    
+        jQuery('.srchicon').click(function() {
+                jQuery('.searchtop').toggle();
+                jQuery('.topsocial').toggle();
+        });  
+        /* animation on load */
+        jQuery('ul.main-menu').circleMenu({
+                item_diameter: 70,
+                circle_radius: 190,
+                direction: 'full',
+                step_in:0, 
+                step_out:0, 
+                trigger: 'click',
+                select: function(evt,item){
+                        window.location = jQuery(item).find('a').attr('href');    
+                }
+        });
+        jQuery('ul.main-menu').circleMenu('open');
+        //jQuery('.tooltip').tooltipster();
+        jQuery('.main-menu a').on('click',function(e){
+                e.preventDefault();                
+        });
+        if (!jQuery('body').hasClass('home')) {
+                var topInitial = jQuery('.entry-title').offset().top - 60;
+                jQuery('body').animate({'scrollTop': topInitial}, '700');
+        }
+        
 })
 
 // navigation orientation resize callbak
@@ -51,7 +77,7 @@ var adjustMenu = function() {
 jQuery(window).scroll(function() {
         jQuery('.services-wrap').each(function(){
             var imagePos = jQuery(this).offset().top;
-    
+        
             var topOfWindow = jQuery(window).scrollTop();
                 if (imagePos < topOfWindow+580) {
                     jQuery(this).addClass("noeffect");
@@ -60,7 +86,7 @@ jQuery(window).scroll(function() {
             
          jQuery('#whatwedo .wedobox').each(function(){
             var imagePos = jQuery(this).offset().top;
-    
+        
             var topOfWindow = jQuery(window).scrollTop();
                 if (imagePos < topOfWindow+400) {
                     jQuery(this).addClass("fadeInUp");
@@ -69,23 +95,14 @@ jQuery(window).scroll(function() {
          
          jQuery('#FrontBlogPost .newsbox').each(function(){
             var imagePos = jQuery(this).offset().top;
-    
+        
             var topOfWindow = jQuery(window).scrollTop();
                 if (imagePos < topOfWindow+400) {
                     jQuery(this).addClass("fadeInRight");
                 }
             });	
-            
-            
-        });
-        
-        jQuery(document).ready(function() {
-        jQuery('.srchicon').click(function() {
-			jQuery('.searchtop').toggle();
-			jQuery('.topsocial').toggle();
-		});
-        
-        
-        /* animation on load */
-       
+    
+    
 });
+
+ 

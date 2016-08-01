@@ -6,21 +6,9 @@ get_header();
       <div class="container">
 		  <section class="site-main" id="sitefull">
 			    
-			   <?php echo do_shortcode('[pjc_slideshow slide_type="home-slider"]'); ?>
-			   
-			   <?php /*<div class="dealers">
-					<h2>Authorized Dealers</h2>
-					<div class="container">
-						 <ul class="dealer-list">
-						 <?php foreach(get_dealers() as $index => $dealer) { ?>
-							  <li><?php echo get_the_post_thumbnail($dealer->ID,array(280,280)); ?></li>
-						 <?php
-							  //echo ((($index+1) % 3) == 0) ? '</div><div class="row">' : '';
-						 } ?>
-						 </ul>
-						 <div class="clear"></div>
-					</div>
-			   </div> */ ?>
+			  <?php //echo do_shortcode('[pjc_slideshow slide_type="home-slider"]'); ?>
+              
+			  <?php include('circular-menu.php'); ?>
              
               <div class="col-md-offset-2">
                   <div class="wedobox col-md-3">

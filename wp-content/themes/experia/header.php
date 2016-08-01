@@ -45,7 +45,9 @@
 	</div>
     <!-- toggle -->
     <div class="nav">
+	  <div class="orig-nav">
       <?php wp_nav_menu( array('menu' => 'Main Menu')); ?>
+	  </div>
     <!-- nav -->
     <div class="clear"></div>
   </div>  <!-- header-inner --> 

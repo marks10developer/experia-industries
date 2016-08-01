@@ -347,4 +347,24 @@ Label the data
 
 }
 
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 10px) and (max-device-width : 1023px) {
+	.circular-menu-container, .space-menu{
+		display: none;
+	}
+	.orig-nav{
+		display: block;
+	}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 1024px)  {
+	.circular-menu-container, .space-menu{
+		display: block;
+	}
+	.orig-nav{
+		display: none;
+	}
+}
+
 /* END Make the cart table responsive */

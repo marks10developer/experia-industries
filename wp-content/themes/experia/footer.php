@@ -47,7 +47,7 @@
                 <div class="copyright-txt">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All Rights Reserved</div>
             </div>
             <div class="clear"></div>
-        </div>
+        </div> 
 <?php wp_footer(); ?>
 </body>
 </html>
