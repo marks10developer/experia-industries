@@ -18,7 +18,13 @@ get_header(); ?>
 			  <?php if(function_exists('bcn_display')) bcn_display(); ?>
 		  </div>
 		  <section class="site-main">
-			   <h1 class="entry-title"><?php the_title(); ?></h1> 
+			   <h1 class="entry-title"><?php the_title(); ?></h1>
+			   <p><i><?php echo get_the_date('M d Y'); ?></i></p>
+			   <?php $img = get_the_post_thumbnail_url(); ?>
+			   <?php if(has_post_thumbnail()){
+			   		echo '<img src="'.$img.'" width="100%" />';		
+			   } ?>
+			   
 			   <?php echo apply_filters('the_content', $post->post_content); ?>
 			   <?php
 					//If comments are open or we have at least one comment, load up the comment template

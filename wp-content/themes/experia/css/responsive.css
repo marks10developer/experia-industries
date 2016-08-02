@@ -44,10 +44,10 @@ section{padding: 25px 0;}
 .top-phonearea{position:relative; left:10px;}
 .social-icons{margin-top:5px;}
 .social-icons a{display:inline-block !important; height:auto;}
-.bx-about-box, .wedobox, .newsbox{width:100%; display:block;}
+.bx-about-box, .wedobox, .newsbox{width:100%; display:block;} 
 .simple-btn-small{height:30px !important;}
 #footer-wrapper .cols-4{margin-bottom:0px; padding-bottom:0px;}
-
+ul.dealer-list li{margin: 30px 0;}
 .entry-content .woocommerce table{ width:300px; display:block;}
 }
  
@@ -94,7 +94,8 @@ section{padding: 25px 0;}
 .bx-about-box{width:33.2%;}
 .simple-btn-small{height:30px !important;}
 .nivo-caption{top:9%; width:70%;}
-.wedobox{width:31.5%;}
+.wedobox{width:48.5%;}
+.wedobox-2{width:99%;}
 .newsbox{width:30%;}
 #footer-wrapper .widget-column-3{ margin-right:0px; width:26%;}
 }
@@ -355,6 +356,10 @@ Label the data
 	.orig-nav{
 		display: block;
 	}
+	.img-handler img{
+		width: 200px;
+	}
+	.wedobox{width:98%;}
 }
 
 /* Smartphones (portrait and landscape) ----------- */

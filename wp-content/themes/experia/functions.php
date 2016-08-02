@@ -7,7 +7,7 @@ function experia_scripts() {
 	wp_enqueue_style( 'experia-editor-style', get_template_directory_uri().'/editor-style.css' ); 
 	wp_enqueue_style( 'experia-main-style', get_template_directory_uri().'/css/responsive.css' );		
 	wp_enqueue_style( 'experia-base-style', get_template_directory_uri().'/css/style_base.css' );
-	wp_enqueue_style( 'experia-font-awesome-style', get_template_directory_uri().'/css/font-awesome.css' );
+	wp_enqueue_style( 'experia-font-awesome-style', get_template_directory_uri().'/css/font-awesome.min.css' );
 	wp_enqueue_style( 'experia-animation-style', get_template_directory_uri().'/css/animation.css' );
 	//wp_enqueue_style( 'experia-tooltip-style', get_template_directory_uri().'/css/tooltipster.bundle.min.css' );
 	//wp_enqueue_script( 'experia-bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' );
@@ -201,6 +201,29 @@ function get_dealers($limit = 30){
 		'meta_key'         => '',
 		'meta_value'       => '',
 		'post_type'        => 'dealers',
+		'post_mime_type'   => '',
+		'post_parent'      => '',
+		'author'	   	   => '',
+		'author_name'	   => '',
+		'post_status'      => 'publish',
+		'suppress_filters' => true 
+	);
+	$posts_array = get_posts( $args );
+	return $posts_array;
+}
+
+function get_projects($limit = 30){
+	$args = array(
+		'posts_per_page'   => $limit,
+		'offset'           => 0,
+		'category'         => '',
+		'category_name'    => '',
+		'orderby'          => 'rand', 
+		'include'          => '',
+		'exclude'          => '',
+		'meta_key'         => '',
+		'meta_value'       => '',
+		'post_type'        => 'projects',
 		'post_mime_type'   => '',
 		'post_parent'      => '',
 		'author'	   	   => '',

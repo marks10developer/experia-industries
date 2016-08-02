@@ -155,7 +155,7 @@ h3.widget-title{color:#4f5051; margin-bottom:-5px; padding-bottom:15px; font-siz
 .cols-4 h5{ font-weight:600; font-size:20px; color:#fff; margin-bottom:15px; font-family:'Montserrat';}
 .cols-4 ul{ margin:0; padding:0; list-style:inside disc;}
 .cols-4 ul li { display:block; padding:0;}
-.cols-4 ul li a { color:#fff; font:normal 12px/24px Arial, Helvetica, sans-serif; background:url(images/list-arrow.png) no-repeat 0 2px; padding:0 0 0 20px;}
+.cols-4 ul li a { color:#fff; font:normal 12px/24px Arial, Helvetica, sans-serif; /*background:url(images/list-arrow.png) no-repeat 0 2px; padding:0 0 0 20px;*/}
 .cols-4 ul li a:hover, .cols-4 ul li.current_page_item a { background-position:left -13px; color:#dd5145; transition: all 0.5s ease 0s; }
 
 .cols-4 a.readmore span{ color:#fff;}
@@ -264,7 +264,7 @@ nav#nav-below{ margin-top:15px;}
 h2.section_title {font-size: 30px; font-weight: 600; margin-bottom: 0; text-align: center; color: #4f5051; font-family: "Montserrat",sans-serif; padding:0 0 22px;}
 .sectiondesc{margin: 0 auto; padding-bottom: 20px; text-align: center; width: 85%; font-family: "Montserrat",sans-serif; color:#8f9092;}
 section{padding: 65px 0;}
-.wedobox{background-color: #fbfbfb; border: 1px solid #cccccc; float: left; height: auto; margin: 5px 3px; min-height: 370px;
+.wedobox{background-color: #fbfbfb; border: 1px solid #cccccc; float: left; height: auto; margin: 5px 3px; height: auto;
 padding: 5px;
 -webkit-border-radius: 7px;
 border-radius: 7px;
@@ -359,15 +359,35 @@ input[type="text"]#search {
   float: right;
   padding: 40px 0 0 0;
 }
+
+
  
-ul.dealer-list{
+ul.dealer-list,ul.news-list{
   list-style: none;
 }
 
 ul.dealer-list li{
-  margin-bottom: 20px;
+  margin: 30px;
+  display: inline;
 }
-
+ul.dealer-list li img{
+  padding: 15px 0; 
+}
+ 
+ul.news-list li .img-handler{
+  min-height: 150px;
+}
+ul.news-list li img{
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+.entry-content img{
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+.boxdescription-news{
+  margin: 0;
+}
 .parallax-page-window {
     min-height: 340px;
     border-top: 3px solid #2d3f97;
@@ -469,4 +489,7 @@ ul.dealer-list li{
 .circular-menu-container .main-menu li h3{
   color: #fff;
   font-size: 13px;
+}
+.faq,.news-container{
+  min-height: 700px;
 }
