@@ -11,7 +11,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="header ">
+<div class="header "> 
+   
   <div class="signin_wrap animated fadeInUp">
     <div class="topfirstbar">
 		<div class="topbarleft">
@@ -23,18 +24,19 @@
 		?>
 		</a>
 		</div>
-		<div class="search-container">
+		<!--<div class="search-container">
 			<form method="get" action="<?php echo get_site_url(); ?>">
 				<div> 
 					<input type="text" class="form-control" name="s" id="search" placeholder="Search" autocomplete="off" value="<?php echo isset($_GET['s']) ? $_GET['s'] : ''; ?>"/>
 					<input type="submit" id="searchsubmit" value="Search" class="hidden" >
 				</div>
 			</form>
-		</div>
+		</div>-->
 		</a>
       <div class="clear"></div>
     </div>
   </div>
+ 
   <!--end signin_wrap-->
   <div class="header-inner  animated fadeInUp">
   

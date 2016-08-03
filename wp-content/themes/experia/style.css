@@ -4,7 +4,7 @@ Author: Experia Industries
 */
 
 body{ margin:0; padding:0;line-height:20px; font-size:13px; color:#5d5c5c; font-family:Roboto, Arial, Helvetica, sans-serif;
-background: url('images/bg-pattern.jpg') repeat;
+/*background: url('images/bg-pattern.jpg') repeat;*/
 }
 *{ margin:0; padding:0; outline:none;}
 img{ border:none; margin:0; padding:0; height:auto}
@@ -67,7 +67,7 @@ ol.comment-list li{ list-style:none; margin-bottom:5px;}
 
 /* = header top sign in  css
 -------------------------------------------------------------- */
-.signin_wrap{ background:url('images/bg-pattern.jpg'); color:#fff; line-height:36px; font-size:14px; padding:4px 0;}
+.signin_wrap{ /*background:url('images/bg-pattern.jpg'); */ color:#fff; line-height:36px; font-size:14px; padding:4px 0;}
 .signin_wrap .social-icons a{margin-right:0;}
 .signin_wrap .fa{margin:0 2px 0 2px;}
 .signin_wrap .right{ text-align:right; line-height:40px;}
@@ -391,7 +391,7 @@ ul.news-list li img{
 .parallax-page-window {
     min-height: 340px;
     border-top: 3px solid #2d3f97;
-    background: url('images/bg-pattern.jpg') repeat;
+    /*background: url('images/bg-pattern.jpg') repeat;*/
     opacity: 0.4;
 }
 .alm-listing .column-list{

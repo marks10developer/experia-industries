@@ -10,7 +10,7 @@ get_header();
               
 			  <?php include('circular-menu.php'); ?>
              
-              
+               <?php /* ?>
               <div class="col-md-offset-2">
                 <div class="wedobox wedobox-2 col-md-9">
                     <div class="boxicon"></div>
@@ -81,10 +81,12 @@ get_header();
                     </div>
                   </div>
                   
-              </div> 
-		  </section>
+              </div>
+              
+            <?php */ ?>
+          </section>
           </div>
         <div class="clear"></div>
     </div><!-- site-aligner -->
 </div><!-- content -->
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
