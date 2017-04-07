@@ -1,26 +1,19 @@
 <?php
-function experia_scripts() { 
-	wp_enqueue_style('experia-font', experia_font_url(), array());
-	
-	wp_enqueue_style( 'experia-bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
-	wp_enqueue_style( 'experia-basic-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'experia-editor-style', get_template_directory_uri().'/editor-style.css' ); 
-	wp_enqueue_style( 'experia-main-style', get_template_directory_uri().'/css/responsive.css' );		
-	wp_enqueue_style( 'experia-base-style', get_template_directory_uri().'/css/style_base.css' );
-	wp_enqueue_style( 'experia-font-awesome-style', get_template_directory_uri().'/css/font-awesome.min.css' );
-	wp_enqueue_style( 'experia-animation-style', get_template_directory_uri().'/css/animation.css' );
-	//wp_enqueue_style( 'experia-tooltip-style', get_template_directory_uri().'/css/tooltipster.bundle.min.css' );
-	//wp_enqueue_script( 'experia-bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' );
-	
-	//wp_enqueue_script( 'experia-parallax_js', get_template_directory_uri() . '/js/parallax.min.js' );
-	//wp_enqueue_script( 'experia-tooltip_js', get_template_directory_uri() . '/js/tooltipster.bundle.min.js' );
-	wp_enqueue_script( 'experia-circle_menu_js', get_template_directory_uri() . '/js/jQuery.circleMenu.js' );
-	wp_enqueue_script( 'experia-custom_js', get_template_directory_uri() . '/js/custom.js' );
+function experia_scripts() {  
+		wp_enqueue_style( 'experia-basic-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'experia-editor-style', get_template_directory_uri().'/editor-style.css' ); 
+		wp_enqueue_style( 'experia-responsive-style', get_template_directory_uri().'/css/responsive.css' );		 
+		wp_enqueue_style( 'experia-font-awesome-style', get_template_directory_uri().'/css/font-awesome.min.css' );
+		wp_enqueue_style( 'experia-hover-css', get_template_directory_uri().'/css/hover.min.css' );
 
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+		wp_enqueue_style( 'experia-hamburgers', get_template_directory_uri().'/css/hamburgers.min.css' );
+		wp_enqueue_style( 'experia-animation-style', get_template_directory_uri().'/css/animation.css' );
+		wp_enqueue_style( 'experia-animation-style-custom', get_template_directory_uri().'/css/animation-custom.css' );  
+		wp_enqueue_script( 'experia-parallax_js', get_template_directory_uri() . '/js/jquery.fullPage.min.js' ); 
+		wp_enqueue_script( 'experia-custom_js', get_template_directory_uri() . '/js/custom.js' ); 
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
 }
 add_action( 'wp_enqueue_scripts', 'experia_scripts' );
 
@@ -280,6 +273,15 @@ function experia_pagination() {
 		echo '</ul></div></div>';
 	}
 }
+
+function experia_body_class($classes) {
+    //$classes[] = 'hidden';
+    return $classes;
+}
+
+add_filter('body_class', 'experia_body_class');
+
+add_filter('show_admin_bar', '__return_false');
 
 function truncateString($string, $len = 10) {
     if (strlen($string) > $len) {

@@ -73,54 +73,7 @@ jQuery(document).ready(function($) {
       	$('.alm-template-toggle', parent).hide()
       	$('.alm-template-toggle', parent).eq(index).show();
    	}
-   });
-	
-	
-	
-	
-	/*
-	*  Mailchimp Signup
-	*  From the setting screen
-	*
-	*  @since 2.7.2
-	*/
-	
-	$('form#alm-mc-embedded').submit(function() {
-      var el = $('#alm-mailing-list'),
-          email = $('input#mc_email', el).val(),
-          data_path = $('form', el).data('path'); 
-   	
-   	// update user interface
-   	$('#response', el).fadeIn(250).addClass('loading');
-   	$('#response p', el).html('Adding email address...');   	
-   	
-   	// Verify email address
-   	if(!IsEmail(email)){
-   		$('#response p', el).html('<i class="fa fa-exclamation-circle"></i> Please enter a valid email address.');
-   		$('#response', el).removeClass('loading');
-   		$('#response', el).delay(2000).fadeOut(250);
-   		return false;
-   	}
-   	// Prepare query string and send AJAX request
-   	$.ajax({
-   		url: data_path,
-   		data: 'ajax=true&email=' + escape(email),
-   		success: function(msg) {
-   		   $('#response', el).removeClass('loading');
-   			$('#response p', el).html(msg);			
-   		},
-   		error: function() {
-            $('#response', el).removeClass('loading').delay(2000).fadeOut(250);	
-   			$('#response p', el).html('There was an error submitting your email address.');
-   		}
-   	});
-   	
-   	return false;
-   });
-   function IsEmail(email) {
-	  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-	  return regex.test(email);
-	}		
+   });	
 	
 	
 	
@@ -242,12 +195,14 @@ jQuery(document).ready(function($) {
 			   		$('.license-title .status', parent).addClass('valid').removeClass('invalid');
 			   		$('.activate.license-btn', parent).addClass('hide');
 			   		$('.deactivate.license-btn', parent).removeClass('hide');
+			   		$('.no-license', parent).slideUp(200);
 			   		
 		   		}else{
 			   		$('.license-key-field .status', parent).removeClass('active').addClass('inactive').text(alm_admin_localize.inactive);
 			   		$('.license-title .status', parent).removeClass('valid').addClass('invalid');	
 			   		$('.activate.license-btn', parent).removeClass('hide');
-			   		$('.deactivate.license-btn', parent).addClass('hide');	   		
+			   		$('.deactivate.license-btn', parent).addClass('hide');
+			   		$('.no-license', parent).slideDown(200);	   		
 		   		}
 		   		
 					$('.loading', parent).delay(250).fadeOut(300);
@@ -275,6 +230,7 @@ jQuery(document).ready(function($) {
       e.preventDefault();
       var el = $(this),
           type = el.data('type'),
+          custom = (el.hasClass('custom')) ? 'true' : 'false',
           textarea = el.closest('.repeater-wrap').find('.CodeMirror'),
           layout_btn_text = el.html(),
           name = el.closest('.repeater-wrap').data('name');
@@ -297,12 +253,14 @@ jQuery(document).ready(function($) {
       		type: 'GET',
       		url: alm_admin_localize.ajax_admin_url,
       		data: {
-      			action: 'alm_layouts_get',
-      			type: type,
-      			nonce: alm_admin_localize.alm_admin_nonce,
+      			action   : 'alm_get_layout',
+      			type     : type,
+      			custom   : custom,
+      			nonce    : alm_admin_localize.alm_admin_nonce,
       		},
-      		dataType: "JSON",
+      		dataType    : "JSON",
       		success: function(data) {  
+         		
                eid.setValue(data.value);
                
                // Clear button styles				  

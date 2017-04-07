@@ -5,7 +5,7 @@ get_header();
      <div class="page_content page_content_home">
 		  <section class="site-main" id="sitefull">
 			    
-			   <?php echo do_shortcode('[pjc_slideshow slide_type="home-slider"]'); ?>
+			   <?php // echo do_shortcode('[pjc_slideshow slide_type="home-slider"]'); ?>
 			   
 			   <div class="dealers">
 					<h2>Authorized Dealers</h2>

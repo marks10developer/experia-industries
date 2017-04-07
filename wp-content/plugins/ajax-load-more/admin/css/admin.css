@@ -1,4 +1,3 @@
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 
 /* Custom buttom/loading styles */
 .select2-results .select2-result.alm-color .select2-result-label{
@@ -76,6 +75,11 @@
 *  @since 1.0
 */
 
+.ajax-load-more *{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
 .forceColors{
 	background: #fff !important;
 }
@@ -87,7 +91,6 @@
    font-size: 14px;
    color:#666;
    position: relative;
-   font-family: 'Open Sans', sans-serif;
    max-width: 1250px;
 }
 #alm-help.ajax-load-more{
@@ -97,12 +100,6 @@
    -webkit-box-shadow: none;
    -moz-box-shadow: none;
    box-shadow: none;
-}
-
-.ajax-load-more *{
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
 }
 
 .ajax-load-more img{
@@ -126,27 +123,32 @@
       min-width: 48%;
       display: inline-block;
       vertical-align: top;
-   }
-   
+   }  
+#alm-settings .row.alm-save-settings{
+   padding-bottom: 5px !important;
+}
    
 #alm-settings form h2{
-   padding: 2px 0 6px 12px;
-   border-left: 5px solid #ff5a58;
+   padding: 12px 0 6px 12px;
+   border-left: 7px solid #ff5a58;
    margin: 0;
+   font-weight: 600;
+   font-size: 1.35em;
 }
 #alm-settings form h2 + p{
    color: #999;
-   padding: 0 0 0 12px;
-   border-left: 5px solid #ff5a58;
-   margin: 0 0 16px;
-   font-size: 13px;
+   padding: 0 0 10px 12px;
+   border-left: 7px solid #ff5a58;
+   margin: 0 0 24px;
+   font-size: 14px;
+   font-style: italic;
 }
 .ajax-load-more code{
 	background: #fcf3d0;
 }
 .ajax-load-more p{
 	display: block;
-	color:#666;
+	color:#777;
 	width: 100%;
 	display: block; 
 	clear: both;
@@ -199,7 +201,8 @@ a.layout-hover{
 }
 
 .ajax-load-more h1{
-	font-weight: 400;
+	font-weight: 600;
+	line-height: 28px;
 }
 .ajax-load-more h1,
 .ajax-load-more h3,
@@ -227,7 +230,7 @@ a.layout-hover{
 /* Expand Collapse Headings */
 .ajax-load-more h3.heading{
    font-weight: 700;
-   padding: 10px 10px 10px 35px !important;
+   padding: 15px 10px 15px 40px !important;
    line-height: normal !important;
    margin: 0 !important;
    color: #555;
@@ -252,8 +255,8 @@ a.layout-hover{
       color: #ccc;
       font-size: 18px;
       position: absolute;
-      left: 10px;
-      top: 13px;
+      left: 13px;
+      top: 17px;
       height: 20px;
       width: 20px;
    }
@@ -274,7 +277,7 @@ a.layout-hover{
 /* Expand/Collapse all rows */
 .ajax-load-more .toggle-all{
     position: absolute;
-    top:-13px;
+    top: -16px;
     right: 20px;
     width: auto;
     display: inline-block;
@@ -282,10 +285,10 @@ a.layout-hover{
     text-transform: uppercase;
     border-radius: 3px;
     padding: 0 12px 0 10px;
-    height: 25px;
-    line-height: 24px;
+    height: 31px;
+    line-height: 30px;
     background: #fff;
-    border:1px solid #ccc;
+    border:1px solid #e7e7e7;
     color: #777;
     cursor: pointer;
     z-index: 2;
@@ -325,7 +328,7 @@ a.layout-hover{
         font-size: 10px;
         position: absolute;
         left: 0;
-        top: -4px;
+        top: -5px;
     }
     .ajax-load-more .toggle-all.closed .inner-wrap:before{
         content:'\f067';
@@ -462,9 +465,9 @@ a.layout-hover{
       position: absolute;
       right: 0;
       top: 0;
-      width: 23px;
-      height: 23px;
-      line-height: 22px;
+      width: 30px;
+      height: 30px;
+      line-height: 28px;
       text-align: center;
       font-weight: 700;
       font-size: 20px;
@@ -520,15 +523,16 @@ a.layout-hover{
 
 .ajax-load-more p.warning-callout{
 	background-color: #cbecf7;
+	border-left: 5px solid #5e99ac;
 	color: #333;
 	font-size: 13px;
 	margin: 0;
 	display: block;
-	padding: 10px;
+	padding: 12px 12px 12px 17px;
 	border-radius: 3px;
 	margin: 10px;
 	width: auto;
-	line-height: 1.75;
+	line-height: 1.55;
 }
    .ajax-load-more p.warning-callout strong{
       display: inline-block;
@@ -541,6 +545,7 @@ a.layout-hover{
    }  
 .ajax-load-more p.warning-callout.notify{
 	background-color: #ad4141;
+	border-color: #903030;
 	color: #fff;
 }
 	
@@ -609,7 +614,7 @@ a.layout-hover{
 }
 .ajax-load-more input[type=text],
 .ajax-load-more input[type=number]{
-   padding: 10px;
+   padding: 14px;
    line-height: 1.3;
    border: 1px solid #e7e7e7;
    width: 60%;  
@@ -675,7 +680,7 @@ a.layout-hover{
 .ajax-load-more input.disabled-input{
    opacity: 0.5;
    filter: alpha(opacity=50);
-   cursor: default;
+   cursor: not-allowed;
    background: #f7f7f7 !important;	
 	border-color: #ccc !important;
 	box-shadow: none !important;
@@ -730,11 +735,17 @@ a.layout-hover{
 	.admin.ajax-load-more .row{ 
 		border-color: #efefef;
 	}
+	.admin.ajax-load-more .repeaters .row:hover,
+	.admin.ajax-load-more.shortcode-builder .row:hover{
+   	border-color: #d9d9d9;
+   	-webkit-box-shadow: 0 0 0 3px #f7f7f7;
+   	-moz-box-shadow: 0 0 0 3px #f7f7f7;
+   	box-shadow: 0 0 0 3px #f7f7f7;
+	}
 	.admin.ajax-load-more .row:first-of-type{
 		margin: 0;
 		padding-top: 0;
-	}
-	
+	}	
    .ajax-load-more .intro{
 		height: auto;  
 		width: 100%;
@@ -753,32 +764,32 @@ a.layout-hover{
       float: right;
       width: 30%;
    }
+   .pop-up-jump .jump-menu-wrap .select2-container{
+		width: 100% !important;  
+		margin-bottom: 15px;
+		position: relative;
+		top: -5px;
+	}
    .pop-up-jump .intro-wrap{
       position: relative;
       float: left;
       width: 65%;
       padding-right: 5%;
+   }   
+   .admin.ajax-load-more .jump-menu{
+   	display: none;
    }
-   
-.admin.ajax-load-more .jump-menu{
-	display: none;
-}
 
 /* Table of Contents */
 .table-of-contents{}
-
 .table-of-contents.attached{
    position: fixed;
    width: auto;
    top: 70px;
 }
-
    .table-of-contents .select2-container{
       width: 100%;
    }
-
-
-
    .table-of-contents ul{
       margin: 0 !important;
    }
@@ -788,8 +799,7 @@ a.layout-hover{
          vertical-align: top;
          padding: 0;
          margin: 5px 5px 5px 0;
-      }
-      
+      }      
    
    
 .ajax-load-more .expand-wrap{
@@ -815,16 +825,25 @@ a.layout-hover{
    width: 100%;
    float: none;
 }
-	.ajax-load-more .section-title p{		
-		font-size: 13px !important;
-/* 		padding-left: 21px !important; */
+	.ajax-load-more .section-title h4{
+      font-size: 15px;	
+      margin-bottom: 13px;
+   }
+	.ajax-load-more .section-title p,
+	.ajax-load-more .wrap p.descriptor{		
+		font-size: 13px;
+		line-height: 20px;
 		color: #999;
 	}
+	.ajax-load-more .wrap p.descriptor{	
+      margin: 0;
+      font-style: italic;
+   }
 	.ajax-load-more .section-title p .fa.tooltip,
 	.form-table label .fa.tooltip{
 		margin: 0 2px;
 		display: inline-block;
-		font-size: 16px;
+		font-size: 15px;
 		opacity: 0.9;
 		top: 0;
 	}
@@ -849,7 +868,6 @@ a.layout-hover{
       color: #666;
    }
 	.ajax-load-more .section-title h4{
-/* 		padding-left: 21px !important; */
 		margin: 0 0 10px;   	
 	}
 	
@@ -877,7 +895,9 @@ a.layout-hover{
 .preload_amount,
 .cache_id,
 .alternate_template_wrap,
-.restapi_options{
+.cta_template_wrap,
+.restapi_options,
+.next-page-content{
    display: none;
 }
 	
@@ -1020,9 +1040,8 @@ a.layout-hover{
 	background: #fff !important;
 	color: #ca5252 !important;
 	border: none;
-	font-size: 13px !important;
+	font-size: 14px !important;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
 	padding: 8px 13px;
 	display: inline-block;
 	text-align: center; 
@@ -1087,16 +1106,17 @@ a.layout-hover{
    .form-table label span{
 	   font-size: 13px;
 	   color: #999;
-	   padding-top: 4px;
+	   padding-top: 5px;
+	   font-style: italic;
    }
    
    .form-table .template-tags{
 	   overflow: hidden;
-	   border: 1px solid #eeeddf;
-	   padding: 6px 10px;
-	   background: #faf9ee;
+	   border: 1px solid #dfd8c2;;
+	   padding: 15px;
+	   background: #fff9ea;
 	   margin: 10px 0 0;
-	   border-radius: 3px;
+	   border-radius: 2px;
    }
    	.form-table .template-tags h4,
    	.form-table .template-tags li{
@@ -1184,13 +1204,12 @@ a.layout-hover{
 /* Table Overrides */
 .admin.ajax-load-more.settings .form-table td,
 .admin.ajax-load-more.settings .form-table th{
-   padding: 20px 0 16px;
+   padding: 24px 0 20px;
    line-height: 1.5;
 }
 .admin.ajax-load-more.settings .form-table th{
 	padding-left: 17px;	
 }
-
 .admin.ajax-load-more.settings .form-table p{
    margin-top: 0;
 }
@@ -1201,33 +1220,41 @@ a.layout-hover{
    overflow: hidden;
    color: #999;
 }
-
 .header-wrap{
-	background: url(../img/alm-logo-48x48.png) no-repeat left 12px;
-	padding-left: 62px;
-	min-height: 48px;
 	overflow: hidden;
-	padding-top: 11px;
+	padding: 10px 0 3px;
 }
 	.ajax-load-more .header-wrap h1{
-		padding-top: 0;
+		padding-left: 60px;
+		min-height: 48px;
+		padding-top: 0;		
+		background: url(../img/alm-logo-48x48.png) no-repeat left 0;
+		background: url(../img/alm-logo-48x48.svg) no-repeat left 0;
 	}
-	.ajax-load-more .header-wrap h1 + p{
-		margin-top: -3px;
-		opacity: 0.8;
-	}
+		.ajax-load-more .header-wrap h1 em{
+	   	display: block;
+	   	position: relative;
+			margin-top: -4px;
+			font-size: 14px;
+			opacity: 0.7;
+			font-style: normal;
+			font-weight: 400;
+		}
 	
 .ajax-load-more h1 span{
 	color: #999;
+	font-weight: 300;
 	background: #fff;
-	padding: 0 5px;
+	padding: 5px 6px;
 	border-radius: 2px;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	position: relative;
-	top: -1px;
+	top: -2px;
+	left: 5px;
 }
 .ajax-load-more h2.addon-title{   
    font-size: 19px !important;
+   line-height: 24px;
    font-weight: 600 !important;
    color: #444 !important;
    padding: 0;
@@ -1239,28 +1266,27 @@ a.layout-hover{
    color: #999 !important;
 }
 
-.ajax-load-more h3.add-on-title,
-.ajax-load-more .cnkt-sidebar h3{
+.ajax-load-more h3.add-on-title{
    padding: 0 0 10px;
    margin: 0 0 20px;
    border-bottom: 1px solid #efefef;
-}
-.ajax-load-more .cnkt-sidebar h3{
-   font-size: 17px;
 }
 .ajax-load-more h3{
    margin-bottom: 10px;
 }
 .ajax-load-more h3.add-on-title,
 .ajax-load-more .cnkt-sidebar h3{
-   padding: 0 0 10px;
+   padding: 0 0 10px; 
    margin: 0 0 20px;
    border-bottom: 1px solid #efefef;
 }
 .ajax-load-more p.desc,
 .ajax-load-more p.writeable-title{
-	font-size: 12px !important;
-	padding: 0 0 5px 28px;
+	padding: 0 0 2px 28px;
+}
+.ajax-load-more p.desc{
+   font-size: 13px !important;
+   line-height: 19px !important;
 }
 .ajax-load-more p.writeable-title{
    position: relative;
@@ -1272,13 +1298,14 @@ a.layout-hover{
 }
 
 .ajax-load-more p.back2top{
-	font-size: 12px;
+	font-size: 14px;
 	margin:0;
-	padding: 5px 2px 5px 0;
-	text-align: right;
+	padding: 0;
+	text-align: center;
 }
 	.ajax-load-more p.back2top a{
 		text-decoration: none;
+		display: block;
 	}
    
 .saved-response,
@@ -1325,7 +1352,7 @@ p.loading{
 	}
 	
 input.save-repeater{
-	margin-bottom: 10px !important;
+	margin-bottom: 5px !important;
 }
 .restore-default{
 	float: right;
@@ -1358,7 +1385,7 @@ table.highlight{
 
 /* Columns */
 .ajax-load-more .cnkt-main{
-   width: 67%;
+   width: 69%;
    float: left;
    margin-top: 10px;
    background: none !important;
@@ -1375,13 +1402,10 @@ table.highlight{
 .ajax-load-more .cnkt-main .group,
 .ajax-load-more .cnkt-sidebar .cta,
 .call-out.light{
-   border: 1px solid #ccc;
+   border: 1px solid #e7e7e7;
    -webkit-border-radius: 3px; 
    -moz-border-radius: 3px; 
    border-radius: 3px; 
-   -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
-   -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
-   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
 }
 .ajax-load-more .cnkt-main.full{
    width: 100%;
@@ -1407,7 +1431,8 @@ table.highlight{
    text-decoration: none;
    width: 40px;
    height: 40px;
-   line-height: 40px;
+   line-height: 38px;
+   padding: 0;
    text-align: center;  
    background: #f7f7f7;
    color: #777;
@@ -1478,8 +1503,13 @@ table.highlight{
    font-size: 14px;
    padding: 8px 14px;
 }
-.ajax-load-more .cnkt-main .group.installed{ }
-
+.ajax-load-more .cnkt-main .group.installed{ 
+   opacity: 0.85;
+   filter: grayscale(0.85);
+}
+.ajax-load-more .cnkt-main .group.installed p:before{
+   display: none !important;
+}
 #alm-add-ons .group img{
    padding: 12px 18px 12px;  
 }
@@ -1488,17 +1518,8 @@ table.highlight{
    display: block;
    padding: 15px;
 }
-   #alm-add-ons .group:hover{
-      border-color: #999;
-      -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
-      -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
-   }
    #alm-add-ons .group.installed:hover{	   
       border-color: #ccc;
-      -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
-      -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
-      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
    }
    #alm-add-ons .group a:hover h2{
       color: #ff5a58 !important;
@@ -1507,17 +1528,18 @@ table.highlight{
 	   color: #444 !important;
 	}
 
+
 /* Add-on Callout! */
 .call-out{
    background: #5acfb2;
-   padding: 13px 100px 13px 12px;
+   padding: 18px 100px 18px 18px;
    border-radius: 3px;
    margin: 0;
    width: 100%;
    display: block;
    color: #fff;
-   font-size: 13px;
-   font-weight: 600;
+   font-size: 14px;
+   font-weight: 400;
    position: relative;
 }
    .call-out.light{
@@ -1535,8 +1557,7 @@ table.highlight{
    }
    .call-out.light p a:hover{
       text-decoration: underline;  
-   }
-   
+   }   
    #alm-builder .call-out,
    .forceColors .call-out{ /* Shortcode builder */
       width: 90%;
@@ -1544,21 +1565,22 @@ table.highlight{
       margin: 10px;
    }
    .call-out .cnkt-button{
-      padding: 5px 8px;
+      padding: 6px 8px;
       display: inline-block;
       background: #fff;
       border: 1px solid #5da592;
       border-radius: 3px;
       position: absolute;
-      right: 7px;
-      top:7px;
+      right: 11px;
+      top: 11px;
       color: #387061 !important;
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      font-size: 13px;
    }
    .call-out a{
       color: #387061 !important;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
    }
    .call-out a:hover{
       color: #222 !important;
@@ -1574,7 +1596,7 @@ table.highlight{
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
       text-decoration: none !important;
       color: #fff !important;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
    }
       a.cnkt-button:hover,
@@ -1667,7 +1689,7 @@ table.highlight{
       .license p,
       .license label{
          font-size: 400;
-         font-size: 13px;
+         font-size: 14px;
       }
       .license .cnkt-button{
          position: absolute;
@@ -1682,6 +1704,23 @@ table.highlight{
          box-shadow: none !important;
          border-color: transparent !important;
       }
+      
+   .license .no-license{
+   	display: block;
+   	padding: 12px 10px 12px 20px;
+   	margin: 0 0 15px 0;
+   	border: 1px solid #e7e7c6;
+   	border-left: 5px solid #e7e7c6;
+   	background-color: #ffffe5;
+   	border-radius: 3px;
+   }
+   	.license .no-license h4{
+   		margin: 0 0 3px;	
+   	}
+   	.license .no-license p{
+   		margin: 5px 0 0;
+   		padding: 0;	
+   	}
       
    
    
@@ -1704,7 +1743,7 @@ table.highlight{
    	.license-btn-wrap .msg{
 	   	display: block;
 	   	padding: 10px 0 0;
-	   	font-size: 13px;
+	   	font-size: 14px;
 	   	line-height: 18px;	
 	   }
    	.license-btn-wrap .msg strong{
@@ -1727,13 +1766,14 @@ table.highlight{
    }
       .license-wrap label{
          font-weight: 600;
-         position: relative;
+/*          position: relative; */
          top:-3px;
       }
       .license-wrap input[type=text]{
          background-color: #fff;
          margin: 0 0 15px;
          width: 100% !important;
+         border-color: #ccc;
       }
          .license-wrap input[type=text]:focus{
             background-color: #fff;  
@@ -1747,8 +1787,8 @@ table.highlight{
       }
       .license-key-field .status{
          position: absolute;
-         right:5px;
-         top: 5px;
+         right:9px;
+         top: 9px;
          display: inline-block;
          border-radius: 2px;
          padding: 6px 12px;
@@ -1765,7 +1805,7 @@ table.highlight{
          
    .ajax-load-more .alm-nav{
       font-size: 600;
-      font-size: 13px;
+      font-size: 14px;
       margin: 0 !important;
       padding: 5px 0 5px;
    }
@@ -1791,17 +1831,24 @@ table.highlight{
  *  @since 1.0
  */
 .ajax-load-more .cnkt-sidebar{
-   width: 30%;
+   width: 29.5%;
    float: right;
    margin-top: 10px;
 }
 	.ajax-load-more .cnkt-sidebar .cta{
 	   background: #fff;
-	   padding: 20px;
+	   padding: 0;
 	   margin: 0 0 20px;
-	   overflow: hidden;
+	   overflow: visible;
 	   position: relative;	
 	}
+	.ajax-load-more .cnkt-sidebar .cta-inner{
+   	padding: 20px;
+   	display: block;
+	}
+	.ajax-load-more .cnkt-sidebar .cta-inner.padding-bottom{
+      padding-bottom: 80px;	
+   }
 	.ajax-load-more .cnkt-sidebar .cta.mailing-list{
 		padding: 0;
 	}
@@ -1810,16 +1857,27 @@ table.highlight{
 		padding: 20px;	
 	}
 	.ajax-load-more .cnkt-sidebar .cta.padding-bottom{
-		padding-bottom: 60px;
+		padding-bottom: 50px;
 	}
 	.ajax-load-more .cnkt-sidebar h3,
 	.ajax-load-more .cnkt-sidebar h4{
 		margin-top: 0;
+	}	
+	.ajax-load-more .cnkt-sidebar h3{
+   	padding: 15px 20px;
+   	border-bottom: 1px solid #efefef;
+   	background: #f7f7f7;
+   	margin: 0;
+   	display: block;
+   	font-size: 15px;
+   	-webkit-border-radius: 2px 2px 0 0;
+   	-moz-border-radius: 2px 2px 0 0;
+   	border-radius: 2px 2px 0 0;
 	}
+	
 	
 	.ajax-load-more .cnkt-sidebar .item{
 		overflow: hidden;
-		padding: 0 0 10px;
 	}
 		.ajax-load-more .cnkt-sidebar .item h4{
 			margin: 0 0 5px;
@@ -1831,23 +1889,25 @@ table.highlight{
 			margin-bottom: 5px;
 		}
 		.ajax-load-more .cnkt-sidebar p{
-			line-height: 20px;
+			line-height: 22px;
 			margin: 0 0 5px;
-			font-size: 13px;
+			font-size: 14px;
 		}
+		.ajax-load-more .cnkt-sidebar .cta.dyk img{}
 		.ajax-load-more .cnkt-sidebar .cta.dyk p{
-			margin: 5px 0;
+			margin: 15px 0 0;
 			display: block;
 			overflow: hidden;
 		}
 		.ajax-load-more .cnkt-sidebar ul{
+   		padding: 5px 0 0;
 		   margin: 0 0 10px;
 		   overflow: hidden;
 		}
 		.ajax-load-more .cnkt-sidebar li{
-			font-size: 13px;
+			font-size: 14px;
 			margin: 0 0 10px;
-			line-height: 1.4;
+			line-height: 1.5;
 		}
 		
 		.ajax-load-more .cnkt-sidebar .cta.resources li{
@@ -1883,9 +1943,8 @@ table.highlight{
 			background: #efefef;
 			line-height: 18px;
 			text-align: center;
-			margin:0 7px 0 0;
+			margin: 2px 7px 0 0;
 			position: relative;
-			top: 1px;
 		}
 		
 			.ajax-load-more .cnkt-sidebar .item i.fa-check{
@@ -1899,8 +1958,8 @@ table.highlight{
 			
 	
 	.ajax-load-more .cnkt-sidebar a.visit{
-		background: #FF5A58;
-		padding: 12px 20px 16px;
+		background: #1e8cbe;
+		padding: 18px 20px 19px 44px;
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -1909,22 +1968,66 @@ table.highlight{
 		color: #fff !important;
 		z-index: 2;
 		text-decoration: none;
+		line-height: 1;
+		-webkit-border-radius: 0 0 2px 2px;
+		-moz-border-radius: 0 0 2px 2px;
+		border-radius: 0 0 2px 2px;
 	}
 		.ajax-load-more .cnkt-sidebar a.visit i{
-			font-size: 24px;
-			opacity: 0.7;
+			font-size: 20px;
+			opacity: 0.4;
 			margin: 0 5px 0 0;
-			position: relative;
-			top:3px;
+			position: absolute;
+			top: 15px;
+			left: 18px;
+			display: inline-block;
 		}
 		.ajax-load-more .cnkt-sidebar a.visit:hover{
-			background: #ec4745;
+			background: #2fa2d6;
 		}
+		.ajax-load-more .cnkt-sidebar a.visit:hover i{
+         opacity: 0.8;
+      }
 		.ajax-load-more .cnkt-sidebar a.visit:active{
-			background: #db403e;
+			background: #42aedf;
 			box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
 		}
 		
+	.ajax-load-more .cnkt-sidebar .project-listing {
+      padding: 0;	
+   }
+	.ajax-load-more .cnkt-sidebar .project-listing li{
+      margin: 20px 0 0;
+      padding: 0;
+      font-size: 13px;
+      position: relative;
+      clear: both;
+	}
+	   .ajax-load-more .cnkt-sidebar .project-listing li a{
+   	   display: block;
+         position: static;
+         padding-left: 50px;
+         min-height: 48px;
+         text-decoration: none;
+      }
+	.ajax-load-more .cnkt-sidebar .project-listing li:first-of-type{
+      margin-top: 0;	
+   }
+	.ajax-load-more .cnkt-sidebar .project-listing img {
+      height: 38px;
+      left: 0;
+      position: absolute;
+      top: 2px;
+      width: 38px;
+   }
+	.ajax-load-more .cnkt-sidebar .project-listing li strong{
+      font-size: 14px;	
+      display: block;
+   }
+	.ajax-load-more .cnkt-sidebar .project-listing li span{
+      color: #777;	
+   }
+	
 		
 		
 /*
@@ -1944,6 +2047,13 @@ table.highlight{
    color: #999;
    line-height: 1.3;
 }
+.ajax-load-more .cm-readonly .CodeMirror{
+   margin: 0 0 20px;
+   opacity: 0.7;
+}
+   .ajax-load-more .cm-readonly p.warning-callout{
+      margin: 0 0 10px;
+   }
    .ajax-load-more .CodeMirror.loading {
       background: #f7f7f7 url("../img/loader-unlimited.gif") no-repeat center center;  
       opacity: 0.6;
@@ -1995,7 +2105,8 @@ table.highlight{
       color: #009999 !important;
    }
    
-   
+
+
    
 /*
 * Delete Template (Unlimited Repeaters
@@ -2081,7 +2192,7 @@ table.highlight{
          border-radius: 2px;
          background: none;
          color: #c94141;    
-         font-size: 13px;
+         font-size: 14px;
          text-decoration: none;  
          display: block;
          padding: 5px 10px;
@@ -2175,8 +2286,6 @@ table.highlight{
       .alm-add-template a:active i{
          color: #fff;
       }
-		
-
 .spacer{ 
    height:10px;
    clear:both; 
@@ -2191,7 +2300,7 @@ table.highlight{
 */
 
 
-.generate-cache-id{
+.generate-id{
    margin: 10px 0 0 !important;
    font-size: 12px !important;
 }
@@ -2213,8 +2322,8 @@ table.highlight{
    }
    .alm-cache-search-wrap i{
       position: absolute;
-      right: 10px;
-      top:10px;
+      right: 14px;
+      top: 14px;
       color: #ccc;
       font-size: 20px;
       z-index: 1;
@@ -2268,8 +2377,9 @@ table.highlight{
    .alm-dir-listing .dir-title .delete{
       position: absolute;
       right:8px;
-      top:7px;
-      font-size: 13px;
+      top:11px;
+      font-weight: 400;
+      font-size: 14px;
       text-decoration: none;
       padding: 5px 10px;
       border: 1px solid #efefef;
@@ -2307,7 +2417,7 @@ table.highlight{
          vertical-align: top;
          overflow: hidden;
          width: 47%;
-         font-size: 13px; 
+         font-size: 14px; 
          background: transparent url(../img/directory-list.gif) no-repeat left center;
       }
       .alm-dir-listing.theme-repeaters ul li{
@@ -2336,7 +2446,7 @@ table.highlight{
       }   
       
       .cache-page-title{ 
-         font-size: 13px; 
+         font-size: 14px; 
          display: block;
          width: 100%;
          padding: 0 0 10px 12px;
@@ -2394,18 +2504,17 @@ table.highlight{
       font-weight: 600;
    }
    
-
+#alm-cache.ajax-load-more .cnkt-sidebar .item{
+   padding: 20px;
+   display: block;
+}
 p.cache-stats{
-	height: 44px;
+	min-height: 38px;
 	line-height: 37px;
 	margin: 0;
-	display: block;	
+	display: block;
+	padding: 20px 20px 0 20px;
 }  
-	p.cache-stats.last{
-		height: 52px;
-		padding-bottom: 16px;
-		border-bottom: 1px solid #efefef;	
-	}
 	p.cache-stats span{
 		display: inline-block;
 		width: 38px;
@@ -2426,12 +2535,18 @@ p.cache-stats{
 		background: -ms-linear-gradient(top, #a4a5e2 0%,#9ea0d9 50%,#8d8fce 51%,#a4a5e2 100%);
 		background: linear-gradient(to bottom, #a4a5e2 0%,#9ea0d9 50%,#8d8fce 51%,#a4a5e2 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4a5e2', endColorstr='#a4a5e2',GradientType=0 );
-
 		border: 1px solid #8586be;
 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);		
 		color: #fff;
 		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
 	}
+	
+form#delete-all-cache{
+   display: block;
+   padding: 20px;
+   border-top: 1px solid #efefef;
+   margin-top: 10px;
+}
 	
 	
 /*
@@ -2465,41 +2580,41 @@ p.cache-stats{
    .ajax-load-more .form-table input[type=checkbox] + label,
    .shortcode-builder input[type=radio] + label,
    .ajax-load-more .form-table input[type=radio] + label{
-      background: #fff url(../img/bkg-chkbox_off.png) no-repeat left top;
+      background: #fff url('../img/bkg-chkbox_off.png') no-repeat left 1px;
       height: auto;
-      min-height: 20px;
+      min-height: 22px;
       width: 100%;
       display:inline-block;
       padding: 1px 0 0 30px;
       margin: 0 0 5px;
-      font-size: 13px;
+      font-size: 14px;
       line-height: 1.42;
       cursor: pointer !important;
    }
    .shortcode-builder input[type=radio] + label,
    .ajax-load-more .form-table input[type=radio] + label{
-      background: #fff url(../img/bkg-radio_off.png) no-repeat left top;
+      background: #fff url('../img/bkg-radio_off.png') no-repeat left 1px;
    }
       
       .shortcode-builder input[type=checkbox]:hover + label,
       .ajax-load-more .form-table input[type=checkbox]:hover + label{ /* hover */
-         background-image: url(../img/bkg-chkbox_on.png);
+         background-image: url('../img/bkg-chkbox_on.png');
       }   
       
       .shortcode-builder input[type=radio]:hover + label,
       .ajax-load-more .form-table input[type=radio]:hover + label{ /* hover */   
-         background-image: url(../img/bkg-radio_on.png);
+         background-image: url('../img/bkg-radio_on.png');
       }  
    
       .shortcode-builder input[type=checkbox]:checked + label,
       .ajax-load-more .form-table input[type=checkbox]:checked + label{ /* selected */   
-         background-image: url(../img/bkg-chkbox_selected.png);
+         background-image: url('../img/bkg-chkbox_selected.png');
          color: #000;
       } 
       
       .shortcode-builder input[type=radio]:checked + label,
       .ajax-load-more .form-table input[type=radio]:checked + label{ /* selected */  
-         background-image: url(../img/bkg-radio_selected.png);
+         background-image: url('../img/bkg-radio_selected.png');
          color: #000;
       }      
          
@@ -2509,7 +2624,47 @@ p.cache-stats{
          .ajax-load-more .form-table input[type=radio] + label:hover{
             color: #000;
          }
+    
          
+/*
+* Shortcode Builder
+*
+* @since 2.13.0
+*/  
+#alm-shortcode-builder-form{
+   position: relative;
+}
+#alm-shortcode-builder-form .shortcode-parameter-wrap{
+   padding: 0 20px 20px;
+   display: block;
+   background: #fff;
+   border: 1px solid #e7e7e7;
+   -webkit-border-radius: 3px; 
+   -moz-border-radius: 3px; 
+   border-radius: 3px; 
+   margin-bottom: 20px;
+}
+   #alm-shortcode-builder-form .shortcode-parameter-wrap h2{
+      padding: 20px 22px;
+      margin: 0 -20px 20px;
+      display: block;
+      font-size: 22px;
+      width: calc(100% + 40px);
+      border-bottom: 1px solid #efefef;
+      background-color: #f7f7f7;
+      -webkit-border-radius: 2px 2px 0 0; 
+      -moz-border-radius: 2px 2px 0 0; 
+      border-radius: 2px 2px 0 0; 
+      color: #23282d;
+   }
+   .forceColors #alm-shortcode-builder-form .shortcode-parameter-wrap h2{
+	   padding: 12px 22px;
+	   font-size: 20px;
+   }
+   #alm-shortcode-builder-form .shortcode-parameter-wrap:first-of-type{
+      margin-top: 0;
+   }
+   
     
 /*
 * Repeater Template options dropdown
@@ -2526,31 +2681,33 @@ p.cache-stats{
 	
 .alm-drop-btn.alm-repeater-options{
    position: absolute;
-   top: -38px;
-   right: 6px;
+   top: -43px;
+   right: 11px;
    z-index:99;
 }
-   .alm-repeater-options a.target,
-   .alm-drop-btn.alm-layout-selection a.target{
+   .alm-drop-btn a.target{      
+      font-weight: 500;  
+      position: relative;
       color: #999;
       text-decoration: none !important;
-      padding: 5px 11px;
+      padding: 8px 12px 8px 32px;
       border: 1px solid #e7e7e7;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       border-radius: 3px;
       font-size: 13px;
+      line-height: 1.25;
       display: block;
       -webkit-box-shadow: 0 0 0 1px #fff;
       -moz-box-shadow: 0 0 0 1px #fff;
       box-shadow: 0 0 0 1px #fff;
    }
-      .alm-repeater-options a i.fa-cog{
+      .alm-drop-btn a.target > i{
          color: #999;
          font-size: 16px;
-         position: relative;
-         top:1px;
-         left: -2px;
+         position: absolute;
+         top:9px;
+         left: 10px;
       }
       .alm-repeater-options a.target:hover{
 			background-color: #fff;
@@ -2590,10 +2747,9 @@ p.cache-stats{
          border-color: #e7e7e7;
          color: #555;
          text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
-         opacity: 0.8;
       }
-      .alm-drop-btn.alm-layout-selection a i{
-         margin: 1px 2px 0 0;
+      .alm-drop-btn.alm-layout-selection > a > i{
+         left: 12px;
       }  
       
       .alm-drop-btn.alm-layout-selection li.type{
@@ -2677,7 +2833,7 @@ p.cache-stats{
          background-color: #5acfb2;
          border: none;
          color: #fff;
-         font-weight: 600;
+         font-weight: 300;
          text-overflow: inherit; 
          height: auto;
          white-space: normal;
@@ -2776,9 +2932,6 @@ p.cache-stats{
       position: relative;
       width: auto;
    }
-   .alm-drop-btn a.target{
-      font-weight: 600;  
-   }
    .alm-dropdown{
       display: none;
       position: absolute;
@@ -2849,7 +3002,7 @@ p.cache-stats{
       padding: 0;
       line-height: 1.2;
       border-top: 1px solid #efefef;
-      font-weight: 600;
+      font-weight: 400;
    }
    .alm-dropdown ul li:first-child{
       border: none;
@@ -3057,20 +3210,19 @@ p.cache-stats{
 
 
 /* share-alm*/
+.ajax-load-more .cnkt-main .group.share-alm{}
 .dotted{
    border: 1px dashed #ccc;
    background: #f7f7f7;
    padding: 20px;
-}
-.share-alm{
-/*    display: none !important; */
 }
    .share-alm .dotted{
       border: none;  
       background: none;
       padding: 5px 10px 0;
    }
-.share-alm h3{
+.share-alm h3,
+.share-alm h4{
    font-size: 16px;
 }
 .share-alm i.fa-star,
@@ -3083,7 +3235,6 @@ p.cache-stats{
    color: #ff5a58;
 }
 .share-alm p{
-   font-size: 13px;
    color: #777;
 }
 .share-alm .sharing{
@@ -3095,6 +3246,7 @@ p.cache-stats{
    width: 52%;
    margin-left: 0 !important;
    padding-left: 40px;
+   padding-right: 30px;
    border-left: 1px dashed #ccc;
 } 
 ul.share{
@@ -3117,9 +3269,9 @@ ul.share{
 		margin: 0 3px;
 		float: left;
 		vertical-align: top;
-		height: 30px;
-		line-height: 30px;
-		font-size: 12px;
+		height: 34px;
+		line-height: 34px;
+		font-size: 13px;
 		width: auto;
 		position: relative;
 		font-weight: 400;
@@ -3194,8 +3346,6 @@ ul.share li.facebook a:hover{
 }   
 
 
-   
-   
    
 /*
 * Local templates Add-on
@@ -3318,6 +3468,12 @@ ul.share li.facebook a:hover{
       display: block;
       float: none;
       padding: 10px;
+   }
+   .ajax-load-more .section-title{
+	   padding: 20px 20px 10px;
+   }
+   .ajax-load-more .row .wrap{
+	   padding: 10px 20px;
    }
    .ajax-load-more input[type=text], 
    .ajax-load-more input[type=number],

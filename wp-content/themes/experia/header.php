@@ -9,52 +9,70 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
 </head>
-
+<div class="loader">
+	 <div class="loader-img"></div>
+</div>
 <body <?php body_class(); ?>>
-<div class="header "> 
-   
-  <div class="signin_wrap animated fadeInUp">
-    <div class="topfirstbar">
-		<div class="topbarleft">
-		<a href="<?php echo get_site_url(); ?>">
-		<?php
-		  if ( function_exists('dynamic_sidebar') && is_active_sidebar("experia_logo") ) {
-			  dynamic_sidebar('experia_logo');
-		  }
-		?>
-		</a>
-		</div>
-		<!--<div class="search-container">
-			<form method="get" action="<?php echo get_site_url(); ?>">
-				<div> 
-					<input type="text" class="form-control" name="s" id="search" placeholder="Search" autocomplete="off" value="<?php echo isset($_GET['s']) ? $_GET['s'] : ''; ?>"/>
-					<input type="submit" id="searchsubmit" value="Search" class="hidden" >
-				</div>
-			</form>
-		</div>-->
-		</a>
-      <div class="clear"></div>
-    </div>
-  </div>
- 
-  <!--end signin_wrap-->
-  <div class="header-inner  animated fadeInUp">
-  
-    <div class="toggle">
-	  <a class="toggleMenu" href="#">
-		<i class="fa fa-navicon fa-2x"></i>
-      </a>
-	</div>
-    <!-- toggle -->
-    <div class="nav">
-	  <div class="orig-nav">
-      <?php wp_nav_menu( array('menu' => 'Main Menu')); ?>
-	  </div>
-    <!-- nav -->
-    <div class="clear"></div>
-  </div>  <!-- header-inner --> 
-</div><!-- header -->
 
+	<header>
+		<div class="secondary-menu-primary hidden animated">
+			<div class="bg-overlay"></div>
+			<?php $main_menu_items = wp_get_nav_menu_items('Main Menu'); ?>
+			<ul>
+				<?php if(!empty($main_menu_items)) {  ?>
+				<?php foreach($main_menu_items as $index =>  $item){ ?>
+					<?php if($index == 2){ ?>
+						<li><a href="<?php echo $item->url; ?>" class="hvr-grow"><?php echo $item->title; ?></a></li>
+						<li class="menu-logo">
+								<a><img src="<?php echo get_template_directory_uri();?>/images/Experia-Aircon-3.png" /></a>
+						</li> 
+					<?php } else { ?>
+						<li><a href="<?php echo $item->url; ?>" class="hvr-grow"><?php echo $item->title; ?></a></li> 
+					<?php } ?>				
+				<?php } ?> 
+			<?php } ?>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="secondary-menu-alt hidden animated">
+			<div class="bg-overlay"></div>
+			<ul>
+				<?php if(!empty($main_menu_items)) {  ?>
+				<?php foreach($main_menu_items as $index =>  $item){ ?>
+					<?php if($index == 2){ ?>
+						<li><a href="<?php echo $item->url; ?>" class="hvr-grow"><?php echo $item->title; ?></a></li>
+						<li class="menu-logo">
+								<a><img src="<?php echo get_template_directory_uri();?>/images/Experia-Aircon-2.png" /></a>
+						</li> 
+					<?php } else { ?>
+						<li><a href="<?php echo $item->url; ?>" class="hvr-grow"><?php echo $item->title; ?></a></li> 
+					<?php } ?>				
+				<?php } ?> 
+			<?php } ?>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="main-menu short hidden animated">
+			<div class="menu-contents">
+				<div class="logo"><img src="<?php echo get_template_directory_uri();?>/images/logo.png" /></div>
+				<div class="menu-list">
+					<ul>
+						<li class="animated hidden"><a href="" class="hvr-grow">Airconditioning</a></li>
+						<li class="animated hidden"><a href="" class="hvr-grow">Elevator</a></li>
+						<li class="animated hidden"><a href="" class="hvr-grow">Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="main-menu-box hamburger hamburger--spin">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</div>
+			</div> 
+		</div> 
+		
+
+	</header>
+ 
 
 <div class="clear"></div>
  

@@ -3,7 +3,7 @@
 Plugin Name: Wordpress Ad Widget
 Plugin URI: https://github.com/broadstreetads/wordpress-ad-widget
 Description: The easiest way to place ads in your Wordpress sidebar. Go to Settings -> Ad Widget
-Version: 2.10.0
+Version: 2.12.0
 Author: Broadstreet Ads
 Author URI: http://broadstreetads.com
 */
@@ -21,7 +21,7 @@ add_action('admin_footer', array('AdWidget_Core', 'footerScripts'));
 class AdWidget_Core
 {
     CONST KEY_INSTALL_REPORT = 'AdWidget_Installed';
-    CONST VERSION = '2.10.0';
+    CONST VERSION = '2.12.0';
     CONST KEY_WELCOME = 'AdWidget_Welcome';
     
     /**
@@ -106,14 +106,13 @@ class AdWidget_Core
         
         if($got_welcome != 'true') {
             $email   = get_bloginfo('admin_email');
-            $subject = "Message from WP AdWidget";
+            $subject = "Welcome - Ad Widget/Broadstreet XPRESS";
 
-            $body = "Thank you for using WP AdWidget! If you have any questions, reach out to kenny@broadstreetads.com.\n\n"
-                    . "*One Other Thing*\n\nYou might also be interested in Selfie: http://wordpress.org/plugins/selfie :)\n\n"
-                    . "It's self serve advertising that you can implement in a couple minutes.\n\n"
-                    . "Best of luck!\n"
-                    . "- Kenny Katzgrau\n\n"
-                    . '"Our readers are perhaps our greatest untapped resource" - New York Times Innovation Report';
+            $body = "Thank you for choosing Wordpress AdWidget! This is a one-time email. If you have any support questions, reach out to frontdesk@broadstreetads.com.\n\n"
+                    . "You may wish to check out our extensive ad format gallery and full-service adserver: http://broadstreetads.com/ad-widget/\n\n"
+                    . "It helps to approach your sales prospects with something they've never seen before. We offer personal, 15 minute demos.\n\n"
+                    . "Best of luck!\n\n"
+                    . "- Kenny Katzgrau (Broadstreet XPRESS)\n\n";
 
             self::setOption(self::KEY_WELCOME, 'true');
             

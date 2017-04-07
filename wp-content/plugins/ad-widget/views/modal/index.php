@@ -36,7 +36,10 @@ if(!defined('WP_ADMIN'))
 }
 
 $page = @$_GET['step'];
-if(!$page) $page = 'signup';
+
+if (FALSE === array_search($page, array('signup', 'signedup', 'reports'))) {
+    $page = 'signup';
+}
 
 if($page == 'signup') 
 {
@@ -65,5 +68,6 @@ if($page == 'signup')
 }
 
 Broadstreet_Adwidget_Mini_Utility::sendReport('Premium Exloration');
+
 require "$page.php";
 

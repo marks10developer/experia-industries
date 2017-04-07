@@ -2,6 +2,7 @@
     border:0;
     
 }
+
 .wpgmza_hide_input { display:none !important; }
 .wpgmza_theme_selection { margin-right:20px; margin-bottom:20px; cursor:pointer; border-radius:4px; }
 
@@ -343,4 +344,38 @@ ul.wpgmza_marker_list_class {
     .wpgmza_infowindow_title {
         width:140px !important;
     }
+}
+
+.wpgmza-badge {
+    background-image: url(../images/WP-google-maps-logo-1-B-transparent.png); position: absolute;
+    background: url(../images/WP-google-maps-logo-1-B-transparent.png) center no-repeat;
+    -webkit-background-size: 202px 101px;
+    background-size: 202px 101px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    margin: 5px 0 0;
+    padding:5px;
+    
+    height: 101px;
+    display: inline-block;
+    width: 202px;
+    text-rendering: optimizeLegibility;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    top: 0;
+    right: 0;
+}
+.toplevel_page_wp-google-maps-menu .about-text {
+    max-width: 600px;
+}
+
+.wpgmaps_fullscreen {
+    position: fixed !important;
+    top:0;
+    left:0;
+    width:100% !important;
+    height: 100% !important;
+    z-index:9999;
 }
