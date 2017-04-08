@@ -2,8 +2,10 @@ var $ = jQuery;
 var min_scroll_height_exchange = 50;
 // NAVIGATION CALLBACK 
 $(document).ready(function() {  
+  
+});
+jQuery(window).load(function() {
   init();
- 
 });
 $(window).scroll(function() {
   /*var speed = 500;
@@ -20,37 +22,42 @@ $(window).scroll(function() {
 });
 
 function init() {
-  $('.loader').fadeOut(900,function(){
-    $('body').removeClass('hidden');
-  }); // Hide Loader
+  $('.loader').fadeOut(1000,function(){
+      $('.main-container').removeClass('hidden');
+      if (!$('.secondary-menu-alt').hasClass('front-page')) {
+        $('.secondary-menu-alt').removeClass('hidden');
+      }
+      mainMenu();
+      $('.fullpage').fullpage({  
+        scrollingSpeed: 800, 
+        afterLoad: function(anchorLink, index){
+          if (index == $('.fullpage').find('.section').length) {
+            $('.main-menu').addClass('fadeOutUp');
+            $('.secondary-menu-primary').removeClass('hidden').removeClass('fadeInUp').removeClass('fadeOutUp').addClass('fadeInDown');
+            
+          }else{
+            $('.main-menu').removeClass('hidden').removeClass('fadeOutUp').addClass('fadeInDown');  
+            $('.secondary-menu-primary').removeClass('fadeInDown').addClass('fadeOutUp'); 
+          }
+    
+          if (1 == index) {
+            $('.scroll-text').removeClass('hidden');
+          }else{
+            $('.scroll-text').addClass('hidden');
+          }
+        },
+        afterRender: function(){ 
+         //console.log("afterRender");
+        }
+       });
+
+  }); // Hide Loader and initialize component
 
   if ($('body').scrollTop() <= min_scroll_height_exchange) { // Show main menu
     //$('.main-menu').removeClass('hidden').removeClass('fadeOutUp').addClass('fadeInDown');
   } 
 
-  mainMenu();
-  $('.fullpage').fullpage({  
-				scrollingSpeed: 800, 
-    afterLoad: function(anchorLink, index){
-      if (index == $('.fullpage').find('.section').length) {
-        $('.main-menu').addClass('fadeOutUp');
-        $('.secondary-menu-primary').removeClass('hidden').removeClass('fadeInUp').removeClass('fadeOutUp').addClass('fadeInDown');
-        
-      }else{
-        $('.main-menu').removeClass('hidden').removeClass('fadeOutUp').addClass('fadeInDown');  
-        $('.secondary-menu-primary').removeClass('fadeInDown').addClass('fadeOutUp'); 
-      }
 
-      if (1 == index) {
-        $('.scroll-text').removeClass('hidden');
-      }else{
-        $('.scroll-text').addClass('hidden');
-      }
-    },
-    afterRender: function(){ 
-					console.log("afterRender");
-				}
-			});
 }
 
 function mainMenu(){

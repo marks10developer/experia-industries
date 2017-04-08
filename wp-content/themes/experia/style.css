@@ -3,6 +3,11 @@
     font-weight: 100;
     src: url("fonts/OratorStd.otf") format("opentype");
 }
+@font-face {
+    font-family: RockwellStd;
+    font-weight: 100;
+    src: url("fonts/RockwellStd.ttf") format("truetype");
+}
 a{
   text-decoration: none;
 }
@@ -12,10 +17,21 @@ ul,ol{
 body{
   font-family: OratorStd;
   margin: 0 auto;
-  
 }
-.container{
-   
+.bg-overlay{
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  position: absolute;
+  opacity: 0.6;
+  z-index: 999;
+}
+.page-inner-container{
+  background: url(images/inner-page.jpg) no-repeat center center fixed;
+  padding: 120px 0 0 0;
+}
+.page-inner-container h1{
+  text-align: center;
 }
 .hidden{
   display: none !important;
@@ -69,7 +85,7 @@ body{
 }
 .menu-contents .menu-list li{
   float: left;
-  padding: 0 25px;
+  padding: 15px 25px;
 }
 .menu-contents .menu-list li a{
   color: #ffffff;
@@ -110,6 +126,7 @@ body{
   line-height: 70px; 
   overflow: hidden;
   float: left;
+  padding: 15px 0;
 }
 .secondary-menu-alt ul li img{
   width: 100%;
@@ -149,6 +166,7 @@ body{
   line-height: 100px; 
   overflow: hidden;
   float: left;
+  padding: 15px 0;
 }
 .secondary-menu-primary ul li img{
   width: 100%;
@@ -203,4 +221,45 @@ body{
 }
 .fullpage img{
   width: 100%;
+}
+.page-inner h1{
+  font-size: 50px;
+  padding-bottom: 30px;
+}
+.section-image img{
+  width: 100%;
+}
+.section-text-content{
+  font-family: RockwellStd; 
+  font-size: 20px;
+  font-weight: 600;
+  text-align: justify;
+}
+.section-item{
+  padding: 20px 0;
+}
+.footer{
+  width: 100%;
+  min-height : 252px;
+  font-family: RockwellStd; 
+  color: #fff;
+}
+.footer .bg-overlay{
+  width: 100%;
+  height: 252px;
+  z-index: 98;
+  left: 0;
+}
+.footer .footer-items {
+  padding: 20px;
+  z-index: 100;
+  padding: 55px 20px;
+  font-size: 20px;
+}
+.footer-text{  
+  background: #1d2a63;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
 }

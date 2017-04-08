@@ -1,8 +1,9 @@
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .main-menu.short{
-				width: 42%;
-		}
-		.secondary-menu-primary ul li.menu-logo{
-				margin-top: 5px;
+				width: 440px;
 		}
 }
+@media screen and (max-width: 768px) {
+     
+}
+ 

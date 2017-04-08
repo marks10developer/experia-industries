@@ -1,6 +1,8 @@
 <?php
-function experia_scripts() {  
-		wp_enqueue_style( 'experia-basic-style', get_stylesheet_uri() );
+function experia_scripts() {
+		wp_enqueue_style( 'experia-bootstrap-css', get_template_directory_uri().'/css/bootstrap.min.css' );
+		wp_enqueue_style( 'experia-basic-style', get_stylesheet_uri() ); 
+		 		
 		wp_enqueue_style( 'experia-editor-style', get_template_directory_uri().'/editor-style.css' ); 
 		wp_enqueue_style( 'experia-responsive-style', get_template_directory_uri().'/css/responsive.css' );		 
 		wp_enqueue_style( 'experia-font-awesome-style', get_template_directory_uri().'/css/font-awesome.min.css' );

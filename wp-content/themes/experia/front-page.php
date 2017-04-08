@@ -1,7 +1,7 @@
 <?php get_header();?>
-<div class="container">
-    <div class="page_content page_content_home">
-      <div class="container">
+ 
+    <div class="page-content page-home">
+       
           <section class="site-main"> 
               <?php $sections = get_field('sections'); ?>
               <?php if(!empty($sections)){ ?>
@@ -28,8 +28,8 @@
           <div class="scroll-text">
             Scroll <i class="fa fa-sort-down animated infinite fadeInDown" aria-hidden="true"></i>
           </div>
-      </div>
+       
     <div class="clear"></div>
     </div><!-- site-aligner -->
-</div><!-- content -->
+ 
 <?php get_footer(); ?>
